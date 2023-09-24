@@ -14,23 +14,7 @@ import autoit
 import os
 from tkinter import Tk, Label, Entry, Button, StringVar
 
-def random_file_path(directory):
-    """
-    Returns a random file path from the specified directory.
-    
-    Parameters:
-    - directory (str): The path to the directory.
-    
-    Returns:
-    - str: The full path to a randomly selected file.
-    """
-    files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
-    
-    if not files:
-        raise ValueError("No files found in the specified directory.")
-    
-    return os.path.join(directory, random.choice(files))
-
+from helper import random_file_path
 
 
 with open('credentials.json', 'r') as file:
