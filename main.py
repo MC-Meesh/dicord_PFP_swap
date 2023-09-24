@@ -11,7 +11,26 @@ import time
 import random
 import base64
 import autoit
+import os
 from tkinter import Tk, Label, Entry, Button, StringVar
+
+def random_file_path(directory):
+    """
+    Returns a random file path from the specified directory.
+    
+    Parameters:
+    - directory (str): The path to the directory.
+    
+    Returns:
+    - str: The full path to a randomly selected file.
+    """
+    files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+    
+    if not files:
+        raise ValueError("No files found in the specified directory.")
+    
+    return os.path.join(directory, random.choice(files))
+
 
 
 with open('credentials.json', 'r') as file:
@@ -100,6 +119,10 @@ print("Selecting image...")
 # Select active element as file input and upload file
 file_input = driver.find_element(By.CLASS_NAME, "file-input")
 file_path = "C:/Users/chase/Desktop/KIRBY/kirby_w_sward2.jpg"
+
+directory_path = "C:/Users/chase/Desktop/KIRBY"
+file_path = random_file_path(directory_path)
+
 file_input.send_keys(file_path)
 
 print("Uploading...")
