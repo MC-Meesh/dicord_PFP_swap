@@ -102,16 +102,15 @@ def change_avatar(driver, directory_path, wait):
     actions.send_keys(Keys.ENTER).perform()
 
     print("Popup loading...")
-    time.sleep(1)
+    time.sleep(2)
 
     print("Selecting image...")
     # Select active element as file input and upload file
     file_input = driver.find_element(By.CLASS_NAME, "file-input")
-    file_path = "C:/Users/chase/Desktop/KIRBY/kirby_w_sward2.jpg"
 
+    #Select file
     directory_path = "C:/Users/chase/Desktop/KIRBY"
     file_path = random_file_path(directory_path)
-
     file_input.send_keys(file_path)
 
     print("Uploading...")
@@ -122,10 +121,11 @@ def change_avatar(driver, directory_path, wait):
     skip.click()
 
 
-    time.sleep(3)
+    time.sleep(4)
     print("Saving Changes...")
     save = driver.find_element(By.XPATH, '/html/body/div[2]/div[2]/div[1]/div[1]/div/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/button[2]/div')
     save.click()
+    time.sleep(4)
 
 
 def main():
