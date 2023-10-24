@@ -21,7 +21,7 @@ ChromeDriver (compatible version with the installed Chrome Browser).
 3. Clone this repo
 
 ### Usage
-1. Create a _credentials.json_ file in the scripts directory. **Do not run this script on publicly accessible devices**
+1. Create a _credentials.json_ file in the scripts directory. **Do not store passwords on publicly accessible devices**
 ```
 {
     "email": "YOUR_DISCORD_EMAIL",
@@ -29,9 +29,9 @@ ChromeDriver (compatible version with the installed Chrome Browser).
     "directory_path": "PATH_TO_DIRECTORY_WITH_IMAGES"
 }
 ```
-3. Run the script to test it out. For daily use, set up a batch file and configure it with Windows Task Scheduler.
-4. A GUI will appear prompting you to enter your Discord two-factor authentication code. Enter the code and press 'Submit'.
-5. The script will change your Discord avatar to a random image from the directory specified in credentials.json.
+2. Run the script to test it out. For daily use, set up a batch file and configure it with Windows Task Scheduler.
+3. A GUI will appear prompting you to enter your Discord two-factor authentication code. Enter the code and press 'Submit'.
+4. The script will change your Discord avatar to a random image from the directory specified in credentials.json.
 
 ### Notes
 - Ensure that the directory_path in credentials.json is valid and contains images. The script will fail if there are no images in the directory.
