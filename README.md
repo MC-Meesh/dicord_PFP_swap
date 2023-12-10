@@ -1,3 +1,5 @@
+#### Note: This repo is no longer maintained, scripts may not work
+
 # Discord Profile Picture (PFP) Swap
 This script is designed to automate the process of changing the user's avatar on Discord.
 It utilizes the Selenium framework to navigate and interact with the web interface of Discord, and features a graphical user interface to accept two-factor authentication codes.
